@@ -29,6 +29,13 @@ class TestCardGame(unittest.TestCase):
         self.assertEqual(self.card2, result)
     
 
+    def test_highest_value_card_is_returned_reverse_order(self):
+
+        result = CardGame.highest_card(self, self.card2, self.card)
+        
+        self.assertEqual(self.card2, result)
+    
+
     def test_cards_total_value(self):
 
         cards = [self.card, self.card1, self.card2]
