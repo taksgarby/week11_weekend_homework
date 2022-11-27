@@ -10,19 +10,15 @@ class TestCardGame(unittest.TestCase):
 
     def test_check_for_ace__is_not_ace(self):
  
-        # act
         result = CardGame.check_for_ace(self, self.card1)
 
-        # assert
         self.assertEqual(False, result)
 
 
     def test_check_for_ace__is_ace(self):
      
-        # act
         result = CardGame.check_for_ace(self, self.card)
 
-        # assert
         self.assertEqual(True, result)
 
 
@@ -35,11 +31,8 @@ class TestCardGame(unittest.TestCase):
 
     def test_cards_total_value(self):
 
-        # arrange
         cards = [self.card, self.card1, self.card2]
         
-        # act
         result = CardGame.cards_total(self, cards)
         
-        # assert   
         self.assertEqual("You have a total of 6", result)
